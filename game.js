@@ -10,12 +10,8 @@ const getComputerPlay = () => {
 }
 
 const playRound = (playerSelection, computerSelection) => {
-    if (playerSelection === 'rock' && computerSelection === "rock"){
-        return "Tie! You both picked rock"
-    } else if (playerSelection === 'scissors' && computerSelection === "scissors"){
-        return "Tie! You both picked scissors"
-    } else if (playerSelection === 'paper' && computerSelection === "paper"){
-        return "Tie! You both picked paper"
+    if (playerSelection === computerSelection ){
+        return `Tie! you both picked ${playerSelection} `
     }else if (playerSelection === 'rock' && computerSelection === "scissors"){
         playerScore ++
         return "You won! Rock crushes scissors"
